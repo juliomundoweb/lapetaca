@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AuthProvider } from './contexts/AuthContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,8 +14,9 @@ function App() {
   const [currentSection, setCurrentSection] = useState('home');
 
   return (
-    <div className="min-h-screen bg-[#0a0604]">
-      <Header currentSection={currentSection} setCurrentSection={setCurrentSection} />
+    <AuthProvider>
+      <div className="min-h-screen bg-[#0a0604]">
+        <Header currentSection={currentSection} setCurrentSection={setCurrentSection} />
 
       {currentSection === 'home' && (
         <>
@@ -31,8 +33,9 @@ function App() {
       {currentSection === 'services' && <Services preview={false} />}
       {currentSection === 'contact' && <Contact />}
 
-      <Footer setCurrentSection={setCurrentSection} />
-    </div>
+        <Footer setCurrentSection={setCurrentSection} />
+      </div>
+    </AuthProvider>
   );
 }
 

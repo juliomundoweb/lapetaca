@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import BookingButton from './BookingButton';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -72,9 +73,13 @@ const Hero = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button className="px-8 py-4 bg-[#78673A] text-white font-semibold rounded-lg hover:bg-[#8a7a48] transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
+                <BookingButton
+                  roomName="Suite Amazonas"
+                  roomPrice={250}
+                  className="px-8 py-4 bg-[#78673A] text-white font-semibold rounded-lg hover:bg-[#8a7a48] transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
+                >
                   Reservar Ahora
-                </button>
+                </BookingButton>
                 <button className="px-8 py-4 bg-transparent border-2 border-[#78673A] text-[#78673A] font-semibold rounded-lg hover:bg-[#78673A] hover:text-white transform hover:scale-105 transition-all duration-300">
                   Explorar
                 </button>

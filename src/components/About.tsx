@@ -1,4 +1,5 @@
 import { Heart, Award, Users, Leaf } from 'lucide-react';
+import BookingButton from './BookingButton';
 
 const About = () => {
   const stats = [
@@ -146,9 +147,13 @@ const About = () => {
               <p className="text-gray-200 text-lg mb-8">
                 Descubre un mundo donde cada momento se convierte en un recuerdo inolvidable
               </p>
-              <button className="px-8 py-4 bg-[#78673A] text-white font-semibold rounded-lg hover:bg-[#8a7a48] transform hover:scale-105 transition-all duration-300 shadow-xl">
+              <BookingButton
+                roomName="Suite Amazonas"
+                roomPrice={250}
+                className="px-8 py-4 bg-[#78673A] text-white font-semibold rounded-lg hover:bg-[#8a7a48] transform hover:scale-105 transition-all duration-300 shadow-xl"
+              >
                 Reserva Ahora
-              </button>
+              </BookingButton>
             </div>
           </div>
         </div>

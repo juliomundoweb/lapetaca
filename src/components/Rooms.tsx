@@ -1,4 +1,5 @@
 import { Wifi, Tv, Wind, Coffee, Users, Maximize } from 'lucide-react';
+import BookingButton from './BookingButton';
 
 interface RoomsProps {
   featured: boolean;
@@ -149,9 +150,13 @@ const Rooms = ({ featured }: RoomsProps) => {
                   ))}
                 </div>
 
-                <button className="w-full py-3 bg-[#78673A] text-white font-semibold rounded-lg hover:bg-[#8a7a48] transition-all duration-300 transform hover:translate-y-[-2px] shadow-lg">
+                <BookingButton
+                  roomName={room.name}
+                  roomPrice={room.price}
+                  className="w-full py-3 bg-[#78673A] text-white font-semibold rounded-lg hover:bg-[#8a7a48] transition-all duration-300 transform hover:translate-y-[-2px] shadow-lg"
+                >
                   Reservar Ahora
-                </button>
+                </BookingButton>
               </div>
             </div>
           ))}

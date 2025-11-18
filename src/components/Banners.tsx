@@ -1,4 +1,5 @@
 import { Gift, Calendar, Percent } from 'lucide-react';
+import BookingButton from './BookingButton';
 
 const Banners = () => {
   const banners = [
@@ -55,9 +56,13 @@ const Banners = () => {
                   {banner.description}
                 </p>
 
-                <button className="w-fit px-6 py-3 bg-[#78673A] text-white font-semibold rounded-lg hover:bg-[#8a7a48] transform hover:scale-105 transition-all duration-300 shadow-lg">
+                <BookingButton
+                  roomName="Suite Amazonas"
+                  roomPrice={250}
+                  className="w-fit px-6 py-3 bg-[#78673A] text-white font-semibold rounded-lg hover:bg-[#8a7a48] transform hover:scale-105 transition-all duration-300 shadow-lg"
+                >
                   {banner.action}
-                </button>
+                </BookingButton>
               </div>
 
               <div className="absolute top-4 right-4 z-10">
@@ -81,9 +86,13 @@ const Banners = () => {
               </p>
             </div>
           </div>
-          <button className="px-8 py-4 bg-[#78673A] text-white font-semibold rounded-lg hover:bg-[#8a7a48] transform hover:scale-105 transition-all duration-300 shadow-xl whitespace-nowrap">
+          <BookingButton
+            roomName="Suite Amazonas"
+            roomPrice={250}
+            className="px-8 py-4 bg-[#78673A] text-white font-semibold rounded-lg hover:bg-[#8a7a48] transform hover:scale-105 transition-all duration-300 shadow-xl whitespace-nowrap"
+          >
             Ver Disponibilidad
-          </button>
+          </BookingButton>
         </div>
       </div>
     </section>
